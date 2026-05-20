@@ -67,7 +67,9 @@ $token = $_SESSION['token'];
         $conn->query(
             "INSERT INTO `entries`(`email`, `color`, `admin`, `text`) 
                                         VALUES ('$email', '$color', '$admin', '$text');"
-        );
+        );else {
+            echo '<div style="color:red;">Ongeldig e-mailadres!</div>';
+        }
     }
 
 
